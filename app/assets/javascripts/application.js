@@ -17,4 +17,12 @@ $(document).ready(function(){
   $('body').on('click', '.close', function(){
     $('#flash-section').hide();
   });
+  $('body').on('click', 'table tr', function(){
+    var _this = $(this);
+
+    if (_this.hasClass('error') == false) {
+      $('table tr').removeClass('active');
+      _this.addClass('active');
+    }
+  })
 });

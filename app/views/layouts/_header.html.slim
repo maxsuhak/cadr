@@ -1,0 +1,5 @@
+ul.nav.nav-tabs
+  li class="#{:active if params[:controller] == "trees" }"
+    = link_to "Tree", trees_path
+  li class="#{:active if params[:controller] == "users" }" 
+    = link_to "Users", "#"
