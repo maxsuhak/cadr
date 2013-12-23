@@ -1,0 +1,166 @@
+ru:
+  will_paginate:
+    previous_label: "Назад"
+    next_label: "Вперед"
+  end_time: "Время окончено"
+  fin: "Test is finished"
+  al_fin: "Test already finished"
+  admin:
+    results:
+      index:
+        search: "Поиск"
+        test_name: "Название теста"
+        action: "Действие"
+        user: "Юзер"
+        mark: "Оценка"
+        mark_type: "Тип оценки"
+        ask: "Вы уверены?"
+        del: "Удалить результат"
+        back: "Назад"
+        result: Результаты
+      show:
+        back: "Назад"
+        question: "Вопрос"
+        answer: "Ответ"
+    tasks:
+      index:
+        search: Поиск
+        find: Искать
+        name: "Название"
+        action: "Действие"
+        ask: "Вы уверены?"
+        history: "История"
+        review: "Просмотр"
+        edit: "Редактировать"
+        del: "Удалить"
+        added: "Добавить"
+        back: "Назад"
+        imp: "Импортировать"
+        dwl_all: "Скачать все CSV"
+        dwl: "Скачать CSV"
+      show:
+        Taskname: "Имя теста: "
+        Question: "Вопрос: "
+        home: "Назад"
+        edit: "Редактировать"
+      form:
+        name: Название
+        close: Закрытый
+        open: Доступный
+        add_question: Добавить вопрос
+        ok: Сохранить
+        back: Назад
+        status: "Статус"
+        check: Выбор
+        write: Письмо
+        type: Тип
+        time: "Время, мин"
+        iteration: Повтор
+        yess: Да
+        noo: Нет
+        max_mark: Максимальный бал
+      question_fields:
+        attach: Добавить картинку к вопросу
+        question: Вопрос
+        add_answer: Добавить ответ
+        remove: Удалить вопрос
+      answer_fields:
+        remove: Удалить ответ
+        correct: Правельный?
+        answer: Ответ
+        noo: "нет"
+        yess: "да"
+  layouts:
+    admin:
+      out: "Выход"
+    admin_menu:
+      asked: "Вопросы"
+      result: "Результаты"
+      home: "Домой"
+    user_menu:
+      asked: "Вопросы"
+      result: "Результаты"
+    application:
+      admin: "Админ"
+      user: "Юзер"
+      out: "Выход"
+    footer:
+      edit: "Вы можете редактировать свой профайл "
+      here: "Сдесь"
+  tasks:
+    index:
+      admin_name: "Автор"
+      start: "Начать"
+      name: "Название теста"
+      action: "Действие"
+      ask: "Вы уверены?"
+      search: "Поиск"
+      back: "Назад"
+    destroy:
+      back: "Назад"
+      ball: "Набрано баллов: "
+      ask: "Вопросов больше нет для теста: "
+    show:
+      reply: "Ответить"
+      title: "Тестирование:"
+  devise:
+    mailer:
+      reset_password_instructions:
+        hello: "Привет "
+        link: "Кто-то запросил изменение пароля. Вы можете изменить пароль по ссылке."
+        change: "Изменить пароль"
+        not: "Если Вы не запрашивали изменения, не обращайте внимания на письмо."
+        createanew: "Ваш пароль не изменится, пока вы не перейдете по ссылке выше."
+    confirmations:
+      new:
+        send: "Отправить повторно письмо с подтверждением"
+    passwords:
+      edit:
+        change_pass: "Измените пароль"
+        new_pass: "Новый пароль"
+        c_new_pass: "Подтвердите новый пароль"
+        changed: "Изменение пароля"
+      new:
+        fogot_pass: "Забыл пароль?"
+        send_pass: "Выслать пароль"
+    registrations:
+      edit:
+        edit: "Редактировать "
+        wait: "Ожидание подтверждения: "
+        leave: "Оставьте поле пустым, если не хотите его менять"
+        confirm: "Нам нужен Ваш текущий пароль, чтобы подтвердить изменения"
+        update: "Обновить"
+        cancel: "Удалить профайл"
+        ask: "Вы уверены?"
+        back: "Назад"
+        unhappy: "Несчастны? "
+        first_name: "Имя"
+        last_name: "Фамилия"
+        pass_confirm: "Подтверждение пароля"
+        current_pass: "Текущий пароль"
+        email: "Email"
+        pass: "Пароль"
+      new:
+        pass: "пароль"
+        с_pass: "повторите пароль"
+        continue: "Продолжить"
+        first_name: "Имя"
+        last_name: "Фамилия"
+    sessions:
+      new:
+        pass: "пароль"
+        log_in: "Войти"
+    shared:
+      links:
+        log_in: "Войти"
+        registrations: "Зарегистрироваться"
+        passwords: "Забыли пароль?"
+        confirmations: "Не получили письмо с подтверждением?"
+        unlocks: "Не получили инструкций разблокировки?"
+        log_in_to: "Войти на "
+  results:
+    index:
+      test_name: "Названние теста"
+      mark_type: "Оценка"
+      admin_name: "Автор"
+      search: "Поиск"
