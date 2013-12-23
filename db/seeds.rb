@@ -2,4 +2,4 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 
-User.create(email: "maxsuhak@gmail.com", password: "1q2w3e4r", first_name: "max", last_name: "suhak")
+User.create(email: "maxsuhak@gmail.com", password: "1q2w3e4r", first_name: "max", last_name: "suhak", sex: "man", birthday: "1992-04-24")

@@ -5,10 +5,15 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :email,              :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
 
+      t.string :avatar_url
       t.string :first_name
       t.string :last_name
-      t.string :telephone
-      
+      t.string :sex
+      t.date :birthday
+
+      t.string :home_tel
+      t.string :mobile_tel
+      t.string :work_tel
 
       t.integer :tree_id
 

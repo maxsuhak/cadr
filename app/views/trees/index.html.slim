@@ -1,2 +1,11 @@
 -if signed_in?
   = link_to 'Выход', destroy_user_session_path, method: :delete, class: "nav"
+
+table
+  tr
+    th Avatar
+    th Email
+  -@users.each do |user|
+    tr
+      td= image_tag avatar_url(user)
+      td= user.email
