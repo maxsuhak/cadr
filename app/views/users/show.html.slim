@@ -2,27 +2,30 @@
   table.u-table
     tbody
       tr
-        td= image_tag avatar_url(@user)
+        td= image_tag avatar_url(current_user)
         td colspan="2"
-          h1= @user.full_name
+          h1= current_user.full_name
       tr
         td &nbsp;
         td style="text-align:right" email:
-        td =link_to @user.email, "mailto:#{@user.email}"
+        td =link_to current_user.email, "mailto:#{current_user.email}"
       tr
         td &nbsp;
         td style="text-align:right" birthday:
-        td = @user.birthday
+        td = current_user.birthday
       tr
         td &nbsp;
         td style="text-align:right" home_tel:
-        td = @user.home_tel
+        td = current_user.home_tel
       tr
         td &nbsp;
         td style="text-align:right" mobile_tel:
-        td = @user.mobile_tel
+        td = current_user.mobile_tel
       tr
         td &nbsp;
         td style="text-align:right" work_tel:
-        td = @user.work_tel
-=link_to "Home", root_path, class: "btn btn-primary pull-right"
+        td = current_user.work_tel
+.pull-right
+  =link_to "Home", root_path, class: "btn btn-primary "
+  |&nbsp;
+  =link_to "Edit", edit_user_path(current_user.id), class: "btn btn-primary"
