@@ -6,9 +6,9 @@
   .field= f.input :birthday, as: :date, start_year: Date.today.year - 50,
                               end_year: Date.today.year + 90,
                               order: [:day, :month, :year]
-  .field= f.input :home_tel
-  .field= f.input :mobile_tel
-  .field= f.input :work_tel
+  .field= f.input :home_tel, placeholder: "home_tel"
+  .field= f.input :mobile_tel, placeholder: "mobile_tel"
+  .field= f.input :work_tel, placeholder: "work_tel"
 
   .link.pull-right
     = f.submit "Сохранить", class: "btn btn-primary"
