@@ -11,3 +11,22 @@
  *= require_self
  *= require_tree .
  */
+ 
+.content {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.user-show {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.u-table {
+  width: 100%;
+  font-size: 18px;
+}
+.u-table td {
+  padding: 5px;
+}

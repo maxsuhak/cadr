@@ -7,13 +7,13 @@ class User < ActiveRecord::Base
 
   def full_name
     if self.first_name.present? && self.last_name.present?
-      self.first_name + ' ' + self.last_name
+      (self.first_name + ' ' + self.last_name).upcase
     elsif self.first_name.present?
-      self.first_name
+      (self.first_name).upcase
     elsif self.last_name.present?
-      self.last_name
+      (self.last_name).upcase
     else
-      self.email
+      (self.email).upcase
     end
   end
 

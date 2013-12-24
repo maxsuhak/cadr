@@ -10,5 +10,6 @@ html
     = render 'layouts/header'
     #flash-section
       = flash_messages
-    = yield
+    .content
+      = yield
     = render 'layouts/footer'

@@ -1,0 +1,28 @@
+.user-show
+  table.u-table
+    tbody
+      tr
+        td= image_tag avatar_url(@user)
+        td colspan="2"
+          h1= @user.full_name
+      tr
+        td &nbsp;
+        td style="text-align:right" email:
+        td =link_to @user.email, "mailto:#{@user.email}"
+      tr
+        td &nbsp;
+        td style="text-align:right" birthday:
+        td = @user.birthday
+      tr
+        td &nbsp;
+        td style="text-align:right" home_tel:
+        td = @user.home_tel
+      tr
+        td &nbsp;
+        td style="text-align:right" mobile_tel:
+        td = @user.mobile_tel
+      tr
+        td &nbsp;
+        td style="text-align:right" work_tel:
+        td = @user.work_tel
+=link_to "Home", root_path, class: "btn btn-primary pull-right"
