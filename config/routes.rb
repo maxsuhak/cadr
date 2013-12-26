@@ -1,5 +1,6 @@
 Cadr::Application.routes.draw do
   
+  devise_for :admins
   devise_for :users
   
   resources :users, only: [:index, :show, :edit, :update]

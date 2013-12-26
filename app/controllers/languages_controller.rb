@@ -4,7 +4,7 @@ class LanguagesController < ApplicationController
   
   def index
     session[:locale] = params[:locale]
-    redirect_to :back
+    # redirect_to :back
   end
 
   private
