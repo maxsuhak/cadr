@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 
   private
     def lenguage
-      I18n.locale = session[:locale]
+      I18n.locale = current_user.lenguage if current_user
+      # I18n.locale = session[:locale]
     end
 end

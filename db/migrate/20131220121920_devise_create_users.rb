@@ -16,6 +16,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :work_tel
 
       t.integer :tree_id
+      t.string :lenguage, default: "ru"
 
       ## Recoverable
       t.string   :reset_password_token

@@ -19,6 +19,7 @@ gem "less-rails"
 gem 'inherited_resources'
 gem 'simple_form'
 gem 'will_paginate'
+gem 'rails-i18n'
 
 group :production do
   gem 'therubyracer'

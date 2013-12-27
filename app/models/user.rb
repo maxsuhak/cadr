@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :first_name, :last_name, :tree_id, :avatar_url, :sex, :birthday, :home_tel, :mobile_tel, :work_tel
+  attr_accessible :first_name, :last_name, :tree_id, :avatar_url, :sex, :birthday, :home_tel, :mobile_tel, :work_tel, :lenguage
 
   def full_name
     if self.first_name.present? && self.last_name.present?

@@ -3,7 +3,8 @@ class LanguagesController < ApplicationController
   before_filter :lenguage
   
   def index
-    session[:locale] = params[:locale]
+    current_user.update_attributes(lenguage: params[:locale]) if current_user
+    # session[:locale] = params[:locale]
     # redirect_to :back
   end
 
