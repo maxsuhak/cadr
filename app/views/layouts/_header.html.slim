@@ -1,5 +1,4 @@
 .menu
-  = link_to 'Выход', destroy_user_session_path, method: :delete, class: "nav pull-right"
   ul.nav.nav-tabs
     li class="#{:active if params[:controller] == "trees" }"
       = link_to "Tree", trees_path

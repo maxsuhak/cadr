@@ -2,7 +2,7 @@
   table.u-table
     tbody
       tr
-        td= image_tag avatar_url(current_user)
+        td= image_tag avatar_url(current_user), width: "68"
         td colspan="2"
           h1= current_user.full_name
       tr
@@ -29,7 +29,3 @@
         td &nbsp;
         td style="text-align:right" work_tel:
         td = current_user.work_tel
-.pull-right
-  =link_to "Home", root_path, class: "btn btn-primary "
-  |&nbsp;
-  =link_to "Edit", edit_user_path(current_user.id), class: "btn btn-primary"
