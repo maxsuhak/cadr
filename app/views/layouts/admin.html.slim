@@ -1,0 +1,12 @@
+DOCTYPE html
+html
+  head
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    link href="assets/icon.jpg" rel="shortcut icon"
+
+  body
+    #flash-section
+      = flash_messages
+    = yield

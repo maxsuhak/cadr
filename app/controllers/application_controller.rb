@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :authenticate_user!, :lenguage
+  before_filter :lenguage
 
   private
     def lenguage
