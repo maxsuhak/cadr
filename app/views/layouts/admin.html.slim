@@ -9,4 +9,6 @@ html
   body
     #flash-section
       = flash_messages
-    = yield
+    = render 'layouts/admin_menu'
+    .content
+      = yield
