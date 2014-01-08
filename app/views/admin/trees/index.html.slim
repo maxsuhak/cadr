@@ -1,0 +1,19 @@
+table.table
+        thead
+                tr
+                        th #
+                        th title
+                        th desc
+                        th действие
+        tbody
+                - @trees.each do |g|
+                        tr
+                                td = g.id
+                                td = g.title
+                                td = g.desc
+                                td 
+                                        = link_to "Редактировать", edit_admin_tree_path(g.id), class: "btn btn-primary" 
+                                        |&nbsp;
+                                        = link_to "Удалить", admin_tree_path(g.id), class: "btn btn-primary", method: :delete, data: {confirm: "Delete img?"}
+
+= link_to "Добавить", new_admin_tree_path, class: "btn pull-right btn-primary"

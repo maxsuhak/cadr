@@ -4,8 +4,6 @@ class LanguagesController < ApplicationController
   
   def index
     current_user.update_attributes(lenguage: params[:locale]) if current_user
-    # session[:locale] = params[:locale]
-    # redirect_to :back
   end
 
   private

@@ -1,0 +1,7 @@
+= simple_form_for [:admin, @tree] do |f|
+        .field= f.input :title
+        .field= f.input :desc
+        .link.pull-right
+                = f.submit "Сохранить", class: "btn btn-primary"
+                |&nbsp;
+                = link_to "Назад", :back, class: "btn btn-primary"
