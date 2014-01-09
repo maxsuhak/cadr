@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   belongs_to :tree
 
+  scope :unsorted, -> { where(tree_id: nil) }
+
   def full_name
     if self.first_name.present? && self.last_name.present?
       (self.first_name + ' ' + self.last_name).upcase
