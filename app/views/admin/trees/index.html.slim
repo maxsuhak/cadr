@@ -1,19 +1,15 @@
-table.table
+h1
+        | Світла команда
+        = link_to "Add", new_admin_tree_path, class: "btn btn-primary pull-right"
+table.table.table-bordered
         thead
                 tr
-                        th #
-                        th title
-                        th desc
-                        th действие
+                        th Department
+                        th Description
+                        th Action
         tbody
                 - @trees.each do |g|
                         tr
-                                td = g.id
-                                td = g.title
+                                td = link_to g.title, edit_admin_tree_path(g.id)
                                 td = g.desc
-                                td 
-                                        = link_to "Редактировать", edit_admin_tree_path(g.id), class: "btn btn-primary" 
-                                        |&nbsp;
-                                        = link_to "Удалить", admin_tree_path(g.id), class: "btn btn-primary", method: :delete, data: {confirm: "Delete img?"}
-
-= link_to "Добавить", new_admin_tree_path, class: "btn pull-right btn-primary"
+                                td = link_to "Delete", admin_tree_path(g.id), class: "btn btn-primary", method: :delete, data: {confirm: "Delete img?"}

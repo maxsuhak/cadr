@@ -3,7 +3,7 @@
     .spacer
     .back-item
   .nav-main
-    = link_to admin_trees_path, class: "main-item #{:active if params[:controller] == "trees" }" do
+    = link_to admin_trees_path, class: "main-item #{:active if params[:controller] == "admin/trees" }" do
       .spacer
       .nav-ico.speed
     = link_to "#", class: "main-item #{:active if ["products"].include?(controller.controller_name)}" do
