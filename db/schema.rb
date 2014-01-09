@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20131226114249) do
   create_table "trees", :force => true do |t|
     t.string   "title"
     t.text     "desc"
+    t.string   "img"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

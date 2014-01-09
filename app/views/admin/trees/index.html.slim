@@ -4,12 +4,14 @@ h1
 table.table.table-bordered
         thead
                 tr
+                        th image
                         th Department
                         th Description
                         th Action
         tbody
                 - @trees.each do |g|
                         tr
+                                td = image_tag g.img, width: "50"
                                 td = link_to g.title, edit_admin_tree_path(g.id)
                                 td = g.desc
                                 td = link_to "Delete", admin_tree_path(g.id), class: "btn btn-primary", method: :delete, data: {confirm: "Delete img?"}

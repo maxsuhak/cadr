@@ -1,1 +1,9 @@
-h2 список каких-то групп
+h1 Світла команда
+
+- @trees.each do |g|
+  .view.view-first
+    = image_tag g.img
+    .mask
+      h2 = g.title
+      p = g.desc
+      = link_to "Show", users_path, class: "info"
