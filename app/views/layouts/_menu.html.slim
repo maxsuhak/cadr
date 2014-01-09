@@ -3,12 +3,12 @@
     .spacer
     .back-item
   .nav-main
-    = link_to root_path, class: "main-item #{:active if params[:controller] == "trees" }" do
-      .spacer
-      .nav-ico.speed
-    = link_to "#", class: "main-item #{:active if ["products"].include?(controller.controller_name)}" do
+    = link_to dashboards_path, class: "main-item #{:active if params[:controller] == "dashboards" }" do
       .spacer
       .nav-ico.goods
+    = link_to trees_path, class: "main-item #{:active if params[:controller] == "trees" }" do
+      .spacer
+      .nav-ico.speed
     = link_to edit_user_path(current_user.id), class: "main-item #{:active if params[:controller] == "users" && params[:action] == "edit" }" do
       .spacer
       .nav-ico.categ
