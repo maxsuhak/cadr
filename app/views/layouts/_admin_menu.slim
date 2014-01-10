@@ -3,6 +3,9 @@
     .spacer
     .back-item
   .nav-main
+    = link_to admin_dashboards_path, class: "main-item #{:active if params[:controller] == "admin/dashboards" }" do
+      .spacer
+      .nav-ico.settings
     = link_to admin_trees_path, class: "main-item #{:active if params[:controller] == "admin/trees" }" do
       .spacer
       .nav-ico.speed

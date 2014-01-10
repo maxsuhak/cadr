@@ -13,12 +13,13 @@ Cadr::Application.routes.draw do
   resources :dashboards
   
   namespace :admin do
-    root to: "trees#index"
+    root to: "dashboards#index"
     resources :users do
       collection do
         get :unsorted
       end
     end
     resources :trees
+    resources :dashboards
   end
 end

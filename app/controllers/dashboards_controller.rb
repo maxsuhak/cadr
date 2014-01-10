@@ -1,4 +1,3 @@
 class DashboardsController < ApplicationController
-  def index
-  end
+  inherit_resources
 end
