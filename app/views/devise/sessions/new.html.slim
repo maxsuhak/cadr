@@ -9,3 +9,5 @@
     .login-postfix
       .login-line= f.input :remember_me, as: :boolean, label: "Запомнить?" if devise_mapping.rememberable?
       = f.button :submit, "Войти", class: "btn btn-primary"
+
+  = link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)

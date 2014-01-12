@@ -3,7 +3,7 @@ Cadr::Application.routes.draw do
   get "dashboards/index"
 
   devise_for :admins
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   
   root to: "dashboards#index"
   
