@@ -70,7 +70,7 @@
     height: 29px;
     margin-top: 26px;
     margin-bottom: 110px;
-    background-image: url('/assets/aside-back-arrow.png'); }
+     }
 
 .aside.collapsed .aside-back .back-item {
   background-position: -29px 0px; }
@@ -135,24 +135,21 @@
   top: 60px;
   right: 10px;
   width: 250px;
-  /*text-align: center;*/
   opacity: 0.6;
-  .alert { font-size: 12px; }
-  .alert-success { 
-    background: #090808;
-    color: #FFF;
-    text-align: left;
-    border-radius: 7px;
-    margin-bottom: 10px;
-  }
-
-  .close {
-    color: #FFF;
-  }
 }
-
-
-
+#flash-section .alert { 
+  font-size: 12px; 
+}
+#flash-section .alert-success { 
+  background: #090808;
+  color: #FFF;
+  text-align: left;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+#flash-section .close {
+  color: #FFF;
+}
 
 .view {
     width: 300px;
@@ -165,7 +162,7 @@
     text-align: center;
     box-shadow: 1px 1px 2px #e6e6e6;
     cursor: default;
-    background: #fff url(../images/bgimg.jpg) no-repeat center center
+    background: #fff no-repeat center center
 }
 .view .mask, .view .content {
     width: 300px;

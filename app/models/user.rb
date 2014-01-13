@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   belongs_to :tree
 
   validates :email, presence: true, uniqueness: true,
-          format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/,
+          format: { with: /\A[A-Za-z0-9._%+-]+@[:svitla]+\.[A-Za-z]+\z/,
                     message: 'The format of Email is invalid'}
   
   scope :unsorted, -> { where(tree_id: nil) }
