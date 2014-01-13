@@ -34,6 +34,7 @@ class User < ActiveRecord::Base
         first_name: data["first_name"],
         last_name: data["last_name"],
         email: data["email"],
+        avatar_url: data["image"],
         password: Devise.friendly_token[0,20])
     end
     user
