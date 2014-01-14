@@ -21,5 +21,6 @@ Cadr::Application.routes.draw do
     end
     resources :trees
     resources :dashboards
+    resources :posts
   end
 end

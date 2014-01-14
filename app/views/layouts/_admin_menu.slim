@@ -9,6 +9,9 @@
     = link_to admin_trees_path, class: "main-item #{:active if params[:controller] == "admin/trees" }" do
       .spacer
       .nav-ico.speed
+    = link_to admin_posts_path, class: "main-item #{:active if params[:controller] == "admin/posts" }" do
+      .spacer
+      .nav-ico.speed
     = link_to admin_users_path, class: "main-item #{:active if params[:controller] == "admin/users" }" do
       .spacer
       .nav-ico.goods

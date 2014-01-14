@@ -1,7 +1,6 @@
-= simple_form_for [:admin, @tree] do |f|
-  .field= f.input :img
+= simple_form_for [:admin, @post] do |f|
+  .field= f.input :email
   .field= f.input :title
-  .field= f.input :desc
   .link.pull-right
     = f.submit "Сохранить", class: "btn btn-primary"
     |&nbsp;

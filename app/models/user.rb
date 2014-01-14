@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   belongs_to :tree
 
-  validate :email_valid, :before => :create
+  validate :email_valid, before: :create
 
   VALID_EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[:svitla]+\.[A-Za-z]+\z/
 
