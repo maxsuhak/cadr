@@ -10,6 +10,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :last_name
       t.string :sex
       t.string :birthday
+      t.string :job
+      t.string :skype
+      t.text :desc
 
       t.string :home_tel
       t.string :mobile_tel

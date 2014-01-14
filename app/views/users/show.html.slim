@@ -7,8 +7,16 @@
           h1= current_user.full_name
       tr
         td &nbsp;
+        td style="text-align:right" job:
+        td =current_user.job
+      tr
+        td &nbsp;
         td style="text-align:right" email:
         td =link_to current_user.email, "mailto:#{current_user.email}"
+      tr
+        td &nbsp;
+        td style="text-align:right" skype:
+        td =link_to "skype", "skype:#{current_user.skype}?call"
       tr
         td &nbsp;
         td style="text-align:right" birthday:
@@ -29,3 +37,7 @@
         td &nbsp;
         td style="text-align:right" work_tel:
         td = current_user.work_tel
+      tr
+        td &nbsp;
+        td style="text-align:right" desc:
+        td = current_user.desc
