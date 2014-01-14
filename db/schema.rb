@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20140110212646) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "sex"
-    t.date     "birthday"
+    t.string   "birthday"
     t.string   "home_tel"
     t.string   "mobile_tel"
     t.string   "work_tel"

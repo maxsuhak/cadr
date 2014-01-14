@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.datepicker
+//= require bootstrap
 //= require_tree .
+
 $(document).ready(function(){
   $('body').on('click', '.close', function(){
     $('#flash-section').hide();
@@ -25,4 +28,15 @@ $(document).ready(function(){
       _this.addClass('active');
     }
   })
+});
+
+$(function() {
+  $( "#user_birthday" ).datepicker({
+    showOn: "button",
+    buttonImage: "../../../../assets/calendar.gif",
+    buttonImageOnly: true,
+    changeMonth: true,
+    changeYear: true,
+    yearRange: "1960:2013"
+  });
 });

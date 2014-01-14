@@ -7,9 +7,13 @@ class User < ActiveRecord::Base
 
   belongs_to :tree
 
+  validate :email_valid, :before => :create
+
+  VALID_EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[:svitla]+\.[A-Za-z]+\z/
+
   validates :email, presence: true, uniqueness: true,
-          format: { with: /\A[A-Za-z0-9._%+-]+@[:svitla]+\.[A-Za-z]+\z/,
-                    message: 'The format of Email is invalid'}
+          format: { with: VALID_EMAIL_REGEX,
+                    message: 'The format of Email is invalid, should be "svitla"'}
   
   scope :unsorted, -> { where(tree_id: nil) }
 
@@ -28,7 +32,6 @@ class User < ActiveRecord::Base
   def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info
     user = User.where(email: data["email"]).first
-
     unless user
       user = User.new(
         first_name: data["first_name"],
@@ -39,4 +42,8 @@ class User < ActiveRecord::Base
     end
     user
   end
+
+  private
+    def email_valid
+    end
 end

@@ -9,7 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :sex
-      t.date :birthday
+      t.string :birthday
 
       t.string :home_tel
       t.string :mobile_tel

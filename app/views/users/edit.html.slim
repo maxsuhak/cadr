@@ -1,18 +1,18 @@
 = simple_form_for current_user do |f|
-  .field.span8= f.input :first_name, placeholder: "first_name"
-  .field.span8= f.input :last_name, placeholder: "last_name"
-  .field.span8= f.input :avatar_url, placeholder: "avatar_url"
-  .field.span8= f.input :email, placeholder: "email"
-  .field.span8= f.input :birthday, as: :date, start_year: Date.today.year - 50,
-                              end_year: Date.today.year + 90,
-                              order: [:day, :month, :year]
-  .field.span4= f.input :sex, collection: ["male", "female"]
-  .field.span4= f.input :lenguage, collection: ["ru", "en"]
-  .field.span8= f.input :home_tel, placeholder: "home_tel"
-  .field.span8= f.input :mobile_tel, placeholder: "mobile_tel"
-  .field.span8= f.input :work_tel, placeholder: "work_tel"
+  .row
+    .span8
+      = f.input :first_name, placeholder: "first_name"
+      = f.input :last_name, placeholder: "last_name"
+      = f.input :avatar_url, placeholder: "avatar_url"
+      = f.input :email, placeholder: "email"
+      = f.input :birthday, readonly: true
+      = f.input :sex, collection: ["male", "female"]
+      = f.input :lenguage, collection: ["ru", "en"]
+      = f.input :home_tel, placeholder: "home_tel"
+      = f.input :mobile_tel, placeholder: "mobile_tel"
+      = f.input :work_tel, placeholder: "work_tel"
 
-  .link.span6.pull-right
-    .span2= f.submit class: "btn btn-primary"
-    |&nbsp;
-    .span2= link_to "Back", :back, class: "btn btn-primary"
+      .pull-right
+        = f.submit class: "btn btn-primary"
+        |&nbsp;
+        = link_to "Back", :back, class: "btn btn-primary"

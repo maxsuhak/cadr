@@ -1,0 +1,15 @@
+= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+  = f.input :first_name, placeholder: "first_name", required: false, label: "Имя"
+  = f.input :last_name, placeholder: "last_name", required: false, label: "Фамилия"
+  = f.input :avatar_url, placeholder: "avatar_url", required: false, label: "Аватар"
+  = f.input :email, placeholder: "email", required: false, label: "Email"
+  = f.input :birthday, readonly: true, required: false, label: "Дата рождения"
+  = f.input :sex, collection: ["male", "female"]
+  = f.input :lenguage, collection: ["ru", "en"]
+  = f.input :home_tel, placeholder: "home_tel", required: false, label: "Домашний телефон"
+  = f.input :mobile_tel, placeholder: "mobile_tel", required: false, label: "Мобильный телефон"
+  = f.input :work_tel, placeholder: "work_tel", required: false, label: "Рабочий телефон"
+  .pull-right
+    = f.submit class: "btn btn-primary"
+    |&nbsp;
+    = link_to "Back", :back, class: "btn btn-primary"
