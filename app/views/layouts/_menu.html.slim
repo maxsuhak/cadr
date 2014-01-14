@@ -9,6 +9,9 @@
     = link_to trees_path, class: "main-item #{:active if params[:controller] == "trees" }" do
       .spacer
       .nav-ico.speed
+    = link_to posts_path, class: "main-item #{:active if params[:controller] == "posts" }" do
+      .spacer
+      .nav-ico.speed
     = link_to edit_user_registration_path(id: current_user.id), class: "main-item #{:active if params[:controller] == "users" && params[:action] == "edit" }" do
       .spacer
       .nav-ico.categ

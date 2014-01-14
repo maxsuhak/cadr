@@ -10,6 +10,7 @@ Cadr::Application.routes.draw do
   resources :users, only: [:index, :show, :edit, :update]
   resources :languages, only: [:index]
   resources :trees, only: [:index]
+  resources :posts, only: [:index]
   resources :dashboards
   
   namespace :admin do
