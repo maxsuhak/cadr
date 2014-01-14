@@ -1,0 +1,12 @@
+h1
+  | Список рассылок
+table.table.table-bordered
+  thead
+    tr
+      th email
+      th title
+  tbody
+    - @posts.each do |p|
+      tr
+        td = link_to p.email, "mailto:#{p.email}"
+        td = p.title
