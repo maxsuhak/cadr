@@ -1,0 +1,15 @@
+h1
+        | Feed
+        = link_to "Add", new_admin_dashboard_path, class: "btn btn-primary pull-right"
+table.table.table-bordered
+        thead
+                tr
+                        th title
+                        th description
+                        th action
+        tbody
+                - @dashboards.each do |d|
+                        tr
+                                td = link_to d.title, edit_admin_dashboard_path(d.id)
+                                td = truncate(strip_tags(d.desc), length: 80)
+                                td = link_to "Delete", admin_dashboard_path(d.id), class: "btn btn-primary", method: :delete, data: {confirm: "Delete email?"}

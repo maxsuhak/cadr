@@ -1,0 +1,7 @@
+h1
+  | Світла-новини
+table.table
+  - @dashboards.reverse_each do |d|
+    tr
+      td = d.title
+      td = d.desc.html_safe
