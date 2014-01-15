@@ -12,6 +12,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :birthday
       t.string :job
       t.string :skype
+      t.string :city
       t.text :desc
 
       t.string :home_tel

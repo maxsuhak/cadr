@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20140114151732) do
     t.string   "birthday"
     t.string   "job"
     t.string   "skype"
+    t.string   "city"
     t.text     "desc"
     t.string   "home_tel"
     t.string   "mobile_tel"
