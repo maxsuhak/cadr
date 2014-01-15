@@ -15,7 +15,7 @@
     = link_to edit_user_registration_path(id: current_user.id), class: "main-item #{:active if devise_controller? }" do
       .spacer
       .nav-ico.categ
-    = link_to languages_path, class: "main-item #{:active if ["languages"].include?(controller.controller_name)}" do
+    = link_to "#", class: "main-item #{:active if ["languages"].include?(controller.controller_name)}" do
       .spacer
       .nav-ico.settings
     = link_to destroy_user_session_path, method: :delete, class: "main-item" do

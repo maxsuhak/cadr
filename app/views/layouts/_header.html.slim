@@ -1,8 +1,6 @@
 .menu
   ul.nav.nav-tabs
-    li class="#{:active if params[:controller] == "trees" }"
-      = link_to "Tree", trees_path
     li class="#{:active if params[:controller] == "users" && params[:action] == "index" }" 
-      = link_to "Users", users_path
+      = link_to "svitla команда", users_path
     li class="#{:active if params[:controller] == "users" && params[:action] == "show" }" 
-      = link_to "Show", user_path(current_user.id)
+      = link_to "profile", user_path(current_user.id)
