@@ -8,7 +8,7 @@ table.table.table-bordered
                         th description
                         th action
         tbody
-                - @dashboards.each do |d|
+                - @dashboards.reverse_each do |d|
                         tr
                                 td = link_to d.title, edit_admin_dashboard_path(d.id)
                                 td = truncate(strip_tags(d.desc), length: 80)

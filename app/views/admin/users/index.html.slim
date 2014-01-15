@@ -5,12 +5,12 @@ h1
 table.table.table-bordered
   thead
     tr
-      th email
-      th title
-      th action
+      th name
+      th 
+      th 
   tbody
     - @users.each do |p|
       tr
-        td = p.full_name
-        td
-        td
+        td = link_to p.full_name, edit_admin_user_path(p.id)
+        td 
+        td 
