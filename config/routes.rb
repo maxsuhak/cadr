@@ -1,7 +1,5 @@
 Cadr::Application.routes.draw do
   
-  get "dashboards/index"
-
   devise_for :admins
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks", registrations: "users/registrations" }
   
@@ -10,7 +8,8 @@ Cadr::Application.routes.draw do
   resources :users, only: [:index, :show, :edit, :update]
   resources :trees, only: [:index]
   resources :posts, only: [:index]
-  resources :dashboards
+  resources :dashboards, only: [:index]
+  resources :docs, only: [:index, :show]
   
   namespace :admin do
     root to: "dashboards#index"
@@ -22,5 +21,6 @@ Cadr::Application.routes.draw do
     resources :trees
     resources :dashboards
     resources :posts
+    resources :docs
   end
 end
