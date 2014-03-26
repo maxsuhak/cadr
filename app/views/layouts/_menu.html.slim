@@ -1,23 +1,6 @@
-.aside.collapsed
-  .aside-back
-    .spacer
-    .back-item
-  .nav-main
-    = link_to dashboards_path, class: "main-item #{:active if params[:controller] == "dashboards" }" do
-      .spacer
-      .nav-ico.goods
-    = link_to trees_path, class: "main-item #{:active if params[:controller] == "trees" }" do
-      .spacer
-      .nav-ico.speed
-    = link_to posts_path, class: "main-item #{:active if params[:controller] == "posts" }" do
-      .spacer
-      .nav-ico.speed
-    = link_to edit_user_registration_path(id: current_user.id), class: "main-item #{:active if devise_controller? }" do
-      .spacer
-      .nav-ico.categ
-    = link_to "#", class: "main-item #{:active if ["languages"].include?(controller.controller_name)}" do
-      .spacer
-      .nav-ico.settings
-    = link_to destroy_user_session_path, method: :delete, class: "main-item" do
-      .spacer
-      .nav-ico.exit
+#main-navigation
+  ul
+    li
+      = link_to "Home", dashboards_path, class: "wattpad-logo #{"active-tab" if params[:controller] == "dashboards" }"
+    li
+      = link_to "Tree", trees_path, class: "entypo-layout"

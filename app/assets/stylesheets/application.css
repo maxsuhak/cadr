@@ -20,6 +20,10 @@
   padding-left: 50px;
 }
 
+#main-navigation{
+  z-index: 9999;
+}
+
 .right_title {
   float: right;
 }
