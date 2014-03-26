@@ -32,6 +32,9 @@ class User < ActiveRecord::Base
   def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info
     user = User.where(email: data["email"]).first
+
+    return unless email_valid(data.email)
+    
     unless user
       user = User.new(
         first_name: data["first_name"],
@@ -43,7 +46,11 @@ class User < ActiveRecord::Base
     user
   end
 
-  private
-    def email_valid
+  def self.email_valid email
+    if email =~ VALID_EMAIL_REGEX
+      true
+    else
+      false
     end
+  end
 end
