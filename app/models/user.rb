@@ -1,13 +1,14 @@
 class User < ActiveRecord::Base
+  mount_uploader :avatar_url, ImageUploader
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :first_name, :last_name, :tree_id, :avatar_url, :sex, :birthday, :home_tel, :mobile_tel, :work_tel, :lenguage, :job, :skype, :desc, :city
+  attr_accessible :first_name, :last_name, :tree_id, :avatar_url, :sex, :birthday, :home_tel, :mobile_tel, :work_tel, :lenguage, :job, :skype, :desc, :city, :avatar_url_cache, :remove_avatar_url
 
   belongs_to :tree
 
-  mount_uploader :avatar_url, ImageUploader
 
   VALID_EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[:svitla]+\.[A-Za-z]+\z/
 

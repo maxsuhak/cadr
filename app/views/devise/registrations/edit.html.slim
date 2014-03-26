@@ -1,7 +1,13 @@
 = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true, method: :put } ) do |f|
   = f.input :first_name, placeholder: "first_name", required: false, label: "Имя"
   = f.input :last_name, placeholder: "last_name", required: false, label: "Фамилия"
-  = f.input :avatar_url, placeholder: "avatar_url", required: false, label: "Аватар"
+  - if current_user.avatar_url.url.present?
+    = image_tag avatar_url(current_user), width: "68"
+    = f.label :remove_avatar_url do
+      = f.check_box :remove_avatar_url
+  = label_tag "Аватар"
+  = f.file_field :avatar_url
+  = f.hidden_field :avatar_url_cache
   = f.input :email, placeholder: "email", required: false, label: "Email"
   = f.input :skype, placeholder: "skype", required: false, label: "Skype"
   = f.input :city, placeholder: "city", required: false, label: "City"
