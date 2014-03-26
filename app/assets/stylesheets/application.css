@@ -46,15 +46,12 @@
 }
 
 .menu{
-  left: 35px;
+  
   top: 0px;
   right: 0px;
   position: fixed;
   width: 100%;
   z-index: 10;
-}
-.nav-tabs {
-  background-color: #323e4c;
 }
 
 .img-logo {

@@ -1,6 +1,16 @@
 #main-navigation
   ul
     li
-      = link_to "Home", dashboards_path, class: "wattpad-logo #{"active-tab" if params[:controller] == "dashboards" }"
+      = link_to "Home", dashboards_path, class: "entypo-home #{"active-tab" if params[:controller] == "dashboards" }"
     li
-      = link_to "Tree", trees_path, class: "entypo-layout"
+      = link_to "Tree", trees_path, class: "entypo-flow-parallel #{"active-tab" if params[:controller] == "trees" }"
+    li
+      = link_to "Email", posts_path, class: "entypo-mail #{"active-tab" if params[:controller] == "posts" }"
+    li
+      = link_to "Users", users_path, class: "entypo-flow-branch #{"active-tab" if params[:controller] == "users" && params[:action] == "index" }"
+    li
+      = link_to current_user.full_name, user_path(id: current_user.id), class: "entypo-user #{"active-tab" if params[:controller] == "users" && params[:action] == "show" }"
+    li
+      = link_to "Edit profile", edit_user_registration_path(id: current_user.id), class: "entypo-menu #{"active-tab" if params[:controller] == "users/registrations" && params[:action] == "edit" }"
+    li
+      = link_to "Log out", destroy_user_session_path, method: :delete, class: "entypo-logout"

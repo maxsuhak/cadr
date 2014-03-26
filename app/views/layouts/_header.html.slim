@@ -1,6 +1,0 @@
-.menu
-  ul.nav.nav-tabs
-    li class="#{:active if params[:controller] == "users" && params[:action] == "index" }" 
-      = link_to "svitla команда", users_path
-    li class="#{:active if params[:controller] == "users" && params[:action] == "show" }" 
-      = link_to "profile", user_path(current_user.id)

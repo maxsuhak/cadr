@@ -1,23 +1,12 @@
-.aside.collapsed
-  .aside-back
-    .spacer
-    .back-item
-  .nav-main
-    = link_to admin_dashboards_path, class: "main-item #{:active if params[:controller] == "admin/dashboards" }" do
-      .spacer
-      .nav-ico.settings
-    = link_to admin_trees_path, class: "main-item #{:active if params[:controller] == "admin/trees" }" do
-      .spacer
-      .nav-ico.speed
-    = link_to admin_posts_path, class: "main-item #{:active if params[:controller] == "admin/posts" }" do
-      .spacer
-      .nav-ico.speed
-    = link_to admin_users_path, class: "main-item #{:active if params[:controller] == "admin/users" }" do
-      .spacer
-      .nav-ico.goods
-    = link_to "#", class: "main-item #{:active if params[:controller] == "admins" && params[:action] == "edit" }" do
-      .spacer
-      .nav-ico.categ
-    = link_to destroy_admin_session_path, method: :delete, class: "main-item" do
-      .spacer
-      .nav-ico.exit
+#main-navigation
+  ul
+    li
+      = link_to "Home", admin_dashboards_path, class: "entypo-home #{"active-tab" if params[:controller] == "admin/dashboards" }"
+    li
+      = link_to "Tree", admin_trees_path, class: "entypo-flow-parallel #{"active-tab" if params[:controller] == "admin/trees" }"
+    li
+      = link_to "Email", admin_posts_path, class: "entypo-mail #{"active-tab" if params[:controller] == "admin/posts" }"
+    li
+      = link_to "Users", admin_users_path, class: "entypo-flow-branch #{"active-tab" if params[:controller] == "admin/users" }"
+    li
+      = link_to "Log out", destroy_admin_session_path, method: :delete, class: "entypo-logout"

@@ -13,6 +13,10 @@
         td =current_user.job
       tr
         td &nbsp;
+        td style="text-align:right" department:
+        td =current_user.tree_id
+      tr
+        td &nbsp;
         td style="text-align:right" city:
         td =current_user.city
       tr
@@ -22,7 +26,7 @@
       tr
         td &nbsp;
         td style="text-align:right" skype:
-        td =link_to "call", "skype:#{current_user.skype}?call"
+        td =link_to current_user.skype, "skype:#{current_user.skype}?call"
       tr
         td &nbsp;
         td style="text-align:right" birthday:
