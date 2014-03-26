@@ -3,5 +3,5 @@ h1
 table.table
   - @dashboards.reverse_each do |d|
     tr
-      td = d.title
+      td = title_position(d)
       td = d.desc.html_safe

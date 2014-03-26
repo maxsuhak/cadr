@@ -20,6 +20,14 @@
   padding-left: 50px;
 }
 
+.right_title {
+  float: right;
+}
+
+.left_title {
+  float: left;
+}
+
 .user-show {
   margin: 0 auto;
   padding: 10px;
