@@ -1,9 +1,11 @@
 Cadr::Application.routes.draw do
   
+  mount Ckeditor::Engine => '/ckeditor'
+
   devise_for :admins
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks", registrations: "users/registrations" }
   
-  root to: "dashboards#index"
+  root to: redirect("/dashboards")
   
   resources :users, only: [:index, :show, :edit, :update]
   resources :trees, only: [:index]

@@ -1,6 +1,6 @@
 = simple_form_for [:admin, @dashboard] do |f|
   .field= f.input :title
-  .field= f.input :desc
+  .field= f.input :desc, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } }
   .link.pull-right
     = f.submit "Сохранить", class: "btn btn-primary"
     |&nbsp;

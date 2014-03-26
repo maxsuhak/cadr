@@ -7,7 +7,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem "jquery-ui-rails"
+  gem 'jquery-ui-rails'
   gem 'jquery-rails'
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass'
@@ -16,12 +16,15 @@ end
 gem 'devise'
 gem 'slim'
 gem 'less'
-gem "less-rails"
+gem 'less-rails'
 gem 'inherited_resources'
 gem 'simple_form'
 gem 'will_paginate'
 gem 'rails-i18n'
 gem 'omniauth-google-oauth2'
+gem 'ckeditor'
+gem 'mini_magick'
+gem 'carrierwave'
 
 group :production do
   gem 'therubyracer'

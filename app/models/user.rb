@@ -7,14 +7,10 @@ class User < ActiveRecord::Base
 
   belongs_to :tree
 
-  validate :email_valid, before: :create
+  mount_uploader :avatar_url, ImageUploader
 
   VALID_EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[:svitla]+\.[A-Za-z]+\z/
 
-  validates :email, presence: true, uniqueness: true,
-          format: { with: VALID_EMAIL_REGEX,
-                    message: 'The format of Email is invalid, should be "svitla"'}
-  
   scope :unsorted, -> { where(tree_id: nil) }
 
   def full_name
@@ -45,12 +41,7 @@ class User < ActiveRecord::Base
     end
     user
   end
-
   def self.email_valid email
-    if email =~ VALID_EMAIL_REGEX
-      true
-    else
-      false
-    end
+    true if email =~ VALID_EMAIL_REGEX
   end
 end

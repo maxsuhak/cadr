@@ -1,7 +1,7 @@
-= simple_form_for [:admin, @tree] do |f|
+= simple_form_for [:admin, @tree], html: { multipart: true } do |f|
   .field= f.input :img
   .field= f.input :title
-  .field= f.input :desc
+  .field= f.input :desc, input_html: { style: "width: 900px; height: 200px;" }
   .link.pull-right
     = f.submit "Сохранить", class: "btn btn-primary"
     |&nbsp;

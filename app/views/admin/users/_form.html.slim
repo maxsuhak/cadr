@@ -1,6 +1,6 @@
 = simple_form_for [:admin, @user] do |f|
   .field= @user.full_name
-  .field= f.input :tree_id, collection: ["tree.title"]
+  .field= f.input :tree_id, collection: Tree.all
   .link.pull-right
     = f.submit "Сохранить", class: "btn btn-primary"
     |&nbsp;
