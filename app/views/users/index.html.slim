@@ -1,4 +1,14 @@
-h2 список юзеров по группе 
-
-- @users.each do |u|
-  = u.full_name
+.table-responsive
+  table.table.table-hover
+    - @users.each do |u|
+      tr
+        td rowspan="4" width="250px" = image_tag avatar_url(u), width: "150"
+        td = u.full_name
+      tr
+        td = u.tree.title
+      tr
+        td = u.job
+      tr
+        td = link_to u.email, "mailto:#{u.email}"
+      tr
+        td colspan="2" = u.desc.html_safe
