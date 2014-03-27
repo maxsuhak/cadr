@@ -1,6 +1,6 @@
 h1
         | Світла команда
-        = link_to "Add", new_admin_tree_path, class: "btn btn-primary pull-right"
+        = link_to "Add", new_admin_tree_path, class: "btn btn-warning pull-right"
 table.table.table-bordered
         thead
                 tr
@@ -14,4 +14,5 @@ table.table.table-bordered
                                 td = image_tag g.img, width: "50"
                                 td = link_to g.title, edit_admin_tree_path(g.id)
                                 td = g.desc
-                                td = link_to "Delete", admin_tree_path(g.id), class: "btn btn-primary", method: :delete, data: {confirm: "Delete img?"}
+                                td = link_to "Delete", admin_tree_path(g.id), class: "btn btn-warning", method: :delete, data: {confirm: "Delete img?"}
+= will_paginate @trees

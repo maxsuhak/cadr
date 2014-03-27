@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[:svitla]+\.[A-Za-z]+\z/
 
   scope :unsorted, -> { where(tree_id: nil) }
+  scope :sorted, -> { where('tree_id IS NOT NULL') }
 
   def full_name
     if self.first_name.present? && self.last_name.present?

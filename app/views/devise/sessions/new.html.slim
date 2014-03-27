@@ -10,4 +10,4 @@
         .login-link= link_to "Забыли пароль ?", new_password_path(resource_name)
       .login-postfix
         .login-line= f.input :remember_me, as: :boolean, label: "Запомнить?" if devise_mapping.rememberable?
-        = f.button :submit, "Войти", class: "btn btn-primary"
+        = f.button :submit, "Войти", class: "btn btn-warning"

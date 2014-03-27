@@ -19,6 +19,6 @@
   = f.input :work_tel, placeholder: "work_tel", required: false, label: "Рабочий телефон"
   = f.input :desc, placeholder: "desc", required: false, label: "Кратко о себе", as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } }
   .pull-right
-    = f.submit class: "btn btn-primary"
+    = f.submit class: "btn btn-warning"
     |&nbsp;
-    = link_to "Back", :back, class: "btn btn-primary"
+    = link_to "Back", :back, class: "btn btn-warning"

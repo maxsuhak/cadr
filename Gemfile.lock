@@ -34,6 +34,8 @@ GEM
     bcrypt-ruby (3.1.2)
     bootstrap-sass (2.3.0.1)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.0.4)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
@@ -232,6 +234,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  bootstrap-will_paginate
   carrierwave
   ckeditor
   coffee-rails (~> 3.2.1)

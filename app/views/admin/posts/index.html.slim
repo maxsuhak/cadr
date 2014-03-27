@@ -1,6 +1,6 @@
 h1
         | Список рассылок
-        = link_to "Add", new_admin_post_path, class: "btn btn-primary pull-right"
+        = link_to "Add", new_admin_post_path, class: "btn btn-warning pull-right"
 table.table.table-bordered
         thead
                 tr
@@ -12,4 +12,5 @@ table.table.table-bordered
                         tr
                                 td = link_to p.email, edit_admin_post_path(p.id)
                                 td = p.title
-                                td = link_to "Delete", admin_post_path(p.id), class: "btn btn-primary", method: :delete, data: {confirm: "Delete email?"}
+                                td = link_to "Delete", admin_post_path(p.id), class: "btn btn-warning", method: :delete, data: {confirm: "Delete email?"}
+= will_paginate @posts

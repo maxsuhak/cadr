@@ -69,87 +69,6 @@
 .ui-datepicker-year {
   padding: 4px 10px 4px 10px;
 }
-.aside {
-  width: 35px;
-  min-height: 100% !important;
-  overflow: hidden;
-  float: left;
-  background-color: #323e4c;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 10; }
-  .aside .aside-back .spacer {
-    display: inline-block;
-    width: 10%;
-    max-width: 20px;
-    height: 29px; }
-  .aside .aside-back .back-item {
-    display: inline-block;
-    cursor: pointer;
-    width: 29px;
-    height: 29px;
-    margin-top: 26px;
-    margin-bottom: 110px;
-     }
-
-.aside.collapsed .aside-back .back-item {
-  background-position: -29px 0px; }
-
-.aside.hide {
-  width: 70px; }
-  .aside.hide .spacer {
-    width: 20px; }
-
-
-.nav-main {
-  border-top: 1px solid #080d14;
-  border-bottom: 1px solid #3f4f62; }
-  .nav-main .main-item {
-    padding-top: 20px;
-    padding-bottom: 23px;
-    text-decoration: none;
-    border-bottom: 1px solid #080d14;
-    border-top: 1px solid #3f4f62;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden; }
-    .nav-main .main-item:hover {
-      opacity: .7; }
-    .nav-main .main-item.active {
-      background-color: #3f4f62;
-      border-top: #0a1019; }
-    .nav-main .main-item:after {
-      content: "";
-      display: table;
-      clear: both; }
-    .nav-main .main-item .spacer {
-      width: 10%;
-      max-width: 20px;
-      display: inline-block;
-      height: 32px; }
-    .nav-main .main-item span {
-      vertical-align: top;
-      display: inline-block;
-      padding-top: 4px;
-      height: 28px;
-      margin-left: 40px;
-      font: 300 18px/24px "Open Sans", sans-serif;
-      color: #fff; }
-    .nav-main .main-item .nav-ico {
-      width: 35px;
-      display: inline-block;
-      height: 32px; }
-      .nav-main .main-item .nav-ico.speed {
-        background: url('/assets/aside-menu-ico1.png') no-repeat left center; }
-      .nav-main .main-item .nav-ico.goods {
-        background: url('/assets/aside-menu-ico2.png') no-repeat left center; }
-      .nav-main .main-item .nav-ico.categ {
-        background: url('/assets/aside-menu-ico3.png') no-repeat left center; }
-      .nav-main .main-item .nav-ico.settings {
-        background: url('/assets/aside-menu-ico4.png') no-repeat left center; }
-      .nav-main .main-item .nav-ico.exit {
-        background: url('/assets/aside-menu-ico5.png') no-repeat left center; }
 
 #flash-section {
   position: fixed;
@@ -272,5 +191,5 @@
     transition-delay: 0.2s;
 }
 #user_birthday {
-  width: 90%;
+  width: 220px;
 }

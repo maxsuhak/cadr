@@ -11,6 +11,7 @@ group :assets do
   gem 'jquery-rails'
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass'
+  gem 'bootstrap-will_paginate'
 end
 
 gem 'devise'
