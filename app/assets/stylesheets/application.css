@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require jquery.ui.all
+ *= require fullcalendar
  *= require_tree .
  */
  
@@ -190,6 +191,13 @@
 .view-first:hover a.info {
     transition-delay: 0.2s;
 }
+
 #user_birthday {
   width: 220px;
+}
+
+.fc-event-skin {
+    background-color: #3366CC;
+    border-color: #3366CC;
+    color: #FFFFFF;
 }

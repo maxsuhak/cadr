@@ -13,4 +13,6 @@
     li
       = link_to "Edit profile", edit_user_registration_path(id: current_user.id), class: "entypo-menu #{"active-tab" if params[:controller] == "users/registrations" && params[:action] == "edit" }"
     li
+      = link_to "calendar", calendar_path, class: "entypo-calendar #{"active-tab" if params[:controller] == "calendars" || params[:controller] == "events" }"
+    li
       = link_to "Log out", destroy_user_session_path, method: :delete, class: "entypo-logout"

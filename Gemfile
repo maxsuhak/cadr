@@ -8,6 +8,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'jquery-ui-rails'
+  gem 'jquery-rest-rails'
   gem 'jquery-rails'
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass'
@@ -26,6 +27,8 @@ gem 'omniauth-google-oauth2'
 gem 'ckeditor'
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'fullcalendar-rails'
+gem 'json'
 
 group :production do
   gem 'therubyracer'

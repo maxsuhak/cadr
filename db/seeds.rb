@@ -19,3 +19,9 @@ Tree.create([{title: "Management Team"},
             {title: "Python Department"}, 
             {title: "Web-design Department"}, 
             {title: "Rare Specialists"}])
+
+Dashboard.create(title: "example", desc: "example")
+
+Post.create(title: "example", email: "example@svitla.com")
+
+User.create(email: "example@svitla.com", first_name: "first_name", last_name: "last_name", tree_id: 1, sex: "male", birthday: "12.12.2014", home_tel: "+38 (0XX) XXX XX XX", mobile_tel: "+38 (0XX) XXX XX XX", work_tel: "+38 (0XX) XXX XX XX", lenguage: "ru", skype: "skype", desc: "example", password: "1q2w3e4r")

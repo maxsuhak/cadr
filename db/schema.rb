@@ -54,12 +54,14 @@ ActiveRecord::Schema.define(:version => 20140326155410) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "docs", :force => true do |t|
+  create_table "events", :force => true do |t|
     t.string   "title"
-    t.text     "desc"
-    t.string   "file"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.boolean  "all_day"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "posts", :force => true do |t|
@@ -78,8 +80,8 @@ ActiveRecord::Schema.define(:version => 20140326155410) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "",   :null => false
-    t.string   "encrypted_password",     :default => "",   :null => false
+    t.string   "email",                  :default => "",               :null => false
+    t.string   "encrypted_password",     :default => "",               :null => false
     t.string   "avatar_url"
     t.string   "first_name"
     t.string   "last_name"
@@ -88,7 +90,7 @@ ActiveRecord::Schema.define(:version => 20140326155410) do
     t.string   "job"
     t.string   "skype"
     t.string   "city"
-    t.text     "desc"
+    t.text     "desc",                   :default => "<b>example</b>"
     t.string   "home_tel"
     t.string   "mobile_tel"
     t.string   "work_tel"
@@ -97,13 +99,13 @@ ActiveRecord::Schema.define(:version => 20140326155410) do
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0,    :null => false
+    t.integer  "sign_in_count",          :default => 0,                :null => false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
+    t.datetime "created_at",                                           :null => false
+    t.datetime "updated_at",                                           :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
