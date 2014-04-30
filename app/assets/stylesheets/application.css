@@ -10,6 +10,8 @@
  *
  *= require_self
  *= require jquery.ui.all
+ *= require fullcalendar
+ *= require fullcalendar.print
  *= require_tree .
  */
  

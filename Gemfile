@@ -16,6 +16,7 @@ gem 'ckeditor'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'betterlorem'
+gem 'fullcalendar-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -23,6 +24,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'jquery-ui-rails'
   gem 'jquery-rails'
+  gem 'jquery-rest-rails'
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass'
   gem 'bootstrap-will_paginate'

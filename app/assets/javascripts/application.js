@@ -15,6 +15,9 @@
 //= require jquery.ui.datepicker
 //= require bootstrap
 //= require ckeditor/init
+//= require fullcalendar
+//= require jquery.rest
+//= require gcal
 //= require_tree .
 
 $(document).ready(function(){
