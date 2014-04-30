@@ -17,6 +17,7 @@ gem 'mini_magick'
 gem 'carrierwave'
 gem 'betterlorem'
 gem 'fullcalendar-rails'
+gem 'json'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

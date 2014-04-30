@@ -252,6 +252,7 @@ DEPENDENCIES
   jquery-rails
   jquery-rest-rails
   jquery-ui-rails
+  json
   less
   less-rails
   letter_opener

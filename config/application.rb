@@ -60,7 +60,6 @@ module Cadr
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = false
-    config.assets.precompile += ['application-print.css']
 
     config.i18n.default_locale = :ru
   end

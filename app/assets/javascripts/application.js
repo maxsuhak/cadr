@@ -13,11 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.datepicker
+//= require jquery.ui.draggable
+//= require jquery.ui.droppable
+//= require jquery.ui.resizable
+//= require jquery.ui.selectable
 //= require bootstrap
 //= require ckeditor/init
 //= require fullcalendar
 //= require jquery.rest
-//= require gcal
 //= require_tree .
 
 $(document).ready(function(){
