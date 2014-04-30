@@ -1,0 +1,6 @@
+| $('#my-dashboards').append('#{j render @dashboards}');
+- if @dashboards.next_page
+  | $('.pagination').replaceWith('#{j will_paginate @dashboards}');
+- else
+  | $(window).off('scroll');
+  | $('.pagination').remove();

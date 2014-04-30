@@ -20,7 +20,7 @@ Tree.create([{title: "Management Team"},
             {title: "Web-design Department"}, 
             {title: "Rare Specialists"}])
 
-Dashboard.create(title: "example", desc: "example")
+Dashboard.create(title: "example", desc: BetterLorem.p(5, false, false))
 
 Post.create(title: "example", email: "example@svitla.com")
 

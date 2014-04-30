@@ -32,6 +32,7 @@ GEM
     arel (3.0.3)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
+    betterlorem (0.1.2)
     bootstrap-sass (2.3.0.1)
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.10)
@@ -233,6 +234,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  betterlorem
   bootstrap-sass
   bootstrap-will_paginate
   carrierwave

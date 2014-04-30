@@ -15,6 +15,7 @@ gem 'omniauth-google-oauth2'
 gem 'ckeditor'
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'betterlorem'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
