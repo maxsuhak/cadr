@@ -12,6 +12,8 @@ Cadr::Application.routes.draw do
   resources :posts, only: [:index]
   resources :dashboards, only: [:index]
   resources :docs, only: [:index, :show]
+  resources :events
+  resource :calendar, only: [:show]
   
   namespace :admin do
     root to: "dashboards#index"
