@@ -1,7 +1,9 @@
 h1
   | Світла-новини
-table.table
+table.table.table-hover
   - @dashboards.reverse_each do |d|
     tr
-      td = title_position(d)
+      th 
+      	h1 = title_position(d)
+    tr
       td = d.desc.html_safe

@@ -13,7 +13,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :job
       t.string :skype
       t.string :city
-      t.text :desc
+      t.text :desc, default: "<b>example</b>"
 
       t.string :home_tel
       t.string :mobile_tel

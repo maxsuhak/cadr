@@ -21,9 +21,13 @@ module ApplicationHelper
   def title_position obj
     title = obj.title
     if obj.id % 2 == 0
-      content_tag(:div, content_tag(:div, "#{title}").html_safe, :class => "right_title")
+      content_tag(:div, content_tag(:div, "#{title}").html_safe, class: "right_title")
     else
-      content_tag(:div, content_tag(:div, "#{title}").html_safe, :class => "left_title")
+      content_tag(:div, content_tag(:div, "#{title}").html_safe, class: "left_title")
     end
+  end
+
+  def is_nil? obj
+    obj.title unless obj == nil
   end
 end

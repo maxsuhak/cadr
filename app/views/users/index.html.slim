@@ -5,7 +5,7 @@
         td rowspan="4" width="250px" = image_tag avatar_url(u), width: "150"
         td = u.full_name
       tr
-        td = u.tree.title
+        td = is_nil?(u.tree)
       tr
         td = u.job
       tr

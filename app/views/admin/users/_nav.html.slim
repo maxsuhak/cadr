@@ -15,7 +15,7 @@ table.table.table-bordered
     - @users.each do |p|
       tr
         td = link_to p.full_name, edit_admin_user_path(p.id)
-        td = p.tree.title
+        td = is_nil?(p.tree)
         td = p.job
         td = link_to "Delete", admin_user_path(p.id), class: "btn btn-warning", method: :delete, data: {confirm: "Delete user?"}
 = will_paginate @users
