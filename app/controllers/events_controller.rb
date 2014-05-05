@@ -10,14 +10,14 @@ class EventsController < ApplicationController
       format.json { render json: @events }
     end
   end
-  
+
   def show
     respond_to do |format|
       format.html 
       format.json { render json: @event }
     end
   end
-  
+
   def new
     @event = Event.new
     respond_to do |format|
@@ -25,7 +25,7 @@ class EventsController < ApplicationController
       format.json { render json: @event }
     end
   end
-  
+
   def create
     @event = Event.new(params[:event])
     respond_to do |format|
@@ -38,7 +38,7 @@ class EventsController < ApplicationController
       end
     end
   end
-  
+
   def update
     respond_to do |format|
       if @event.update_attributes(params[:event])
@@ -50,7 +50,7 @@ class EventsController < ApplicationController
       end
     end
   end
-  
+
   def destroy
     @event.destroy
     respond_to do |format|
