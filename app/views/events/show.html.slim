@@ -1,0 +1,15 @@
+h1.pull-left Задача: #{link_to @event.title, edit_event_path(@event)}
+table.table
+  tr
+    th start
+    th end
+    th all day?
+    th desc
+  tr
+    td = @event.starts_at
+    td = @event.ends_at
+    td = @event.all_day
+    td = @event.description
+.pull-right
+  = link_to 'Destroy', @event, confirm: 'Are you sure?', method: :delete, class: 'btn btn-warning'
+  = link_to 'Back', calendar_path, class: 'btn btn-warning'

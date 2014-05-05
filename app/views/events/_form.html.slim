@@ -1,0 +1,10 @@
+= simple_form_for @event do |f|
+  .span12= f.input :title
+  .span12= f.input :starts_at
+  .span12= f.input :ends_at
+  .span12= f.input :all_day
+  .span12= f.input :description, input_html: { style: "width: 900px; height: 200px;" }
+  .span12
+    = f.submit "Сохранить", class: "btn btn-warning pull-right"
+    |&nbsp;
+    = link_to "Назад", calendar_path, class: "btn btn-warning pull-right"
