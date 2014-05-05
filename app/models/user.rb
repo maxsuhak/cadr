@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :tree_id, :avatar_url, :sex, :birthday, :home_tel, :mobile_tel, :work_tel, :lenguage, :job, :skype, :desc, :city, :avatar_url_cache, :remove_avatar_url
 
   belongs_to :tree
-
+  has_many :events
 
   VALID_EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[:svitla]+\.[A-Za-z]+\z/
 
@@ -43,6 +43,7 @@ class User < ActiveRecord::Base
     end
     user
   end
+
   def self.email_valid email
     true if email =~ VALID_EMAIL_REGEX
   end

@@ -1,5 +1,7 @@
 class Event < ActiveRecord::Base
-  attr_accessible :title, :starts_at, :ends_at, :all_day, :description, :created_at, :updated_at
+  attr_accessible :title, :starts_at, :ends_at, :all_day, :description, :created_at, :updated_at, :user_id
+
+  belongs_to :user
 
   scope :between, lambda {|start_time, end_time|
     {:conditions => ["? < starts_at < ?", Event.format_date(start_time), Event.format_date(end_time)] }
