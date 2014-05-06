@@ -39,9 +39,13 @@ group :production do
 end
 
 group :test do
- gem 'database_cleaner'
- gem 'shoulda'
- gem 'fakeweb'
+  gem 'database_cleaner'
+  gem 'shoulda'
+  gem 'fakeweb'
+  gem 'libxml-ruby'
+  gem 'simplecov'
+  gem 'rack-contrib'
+  gem 'poltergeist'
 end
 
 group :development, :test do
@@ -51,4 +55,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'letter_opener'
+  gem 'faker'
+  gem 'capybara', git: "git://github.com/jnicklas/capybara.git", branch: "1.1_stable"
 end
