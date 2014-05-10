@@ -21,8 +21,6 @@ class ApplicationController < ActionController::Base
   end
 
   private
-
-  private
     def lenguage
       I18n.locale = current_user.lenguage if current_user
     end
