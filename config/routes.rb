@@ -2,6 +2,10 @@ Cadr::Application.routes.draw do
   
   mount Ckeditor::Engine => '/ckeditor'
 
+  unless Rails.application.config.consider_all_requests_local
+    match '*not_found', to: 'errors#error_404'
+  end
+
   devise_for :admins
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks", registrations: "users/registrations" }
   
