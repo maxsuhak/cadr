@@ -1,0 +1,11 @@
+tr
+  td rowspan="4" width="250px" = image_tag avatar_url(user), width: "150"
+  td = user.full_name
+tr
+  td = is_nil?(user.tree)
+tr
+  td = user.job
+tr
+  td = link_to user.email, "mailto:#{user.email}"
+tr
+  td colspan="2" = user.desc.html_safe

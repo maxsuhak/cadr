@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
   scope :unsorted, -> { where(tree_id: nil) }
   scope :sorted, -> { where('tree_id IS NOT NULL') }
 
+  self.per_page = 5
+
   def full_name
     if self.first_name.present? && self.last_name.present?
       (self.first_name + ' ' + self.last_name).upcase
