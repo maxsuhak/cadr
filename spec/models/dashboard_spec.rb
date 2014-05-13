@@ -4,7 +4,7 @@ describe Dashboard do
   let(:dashboard) { create :dashboard }
 
   describe '.per_page' do
-    it { described_class.per_page.should == 10 }
+    it { described_class.per_page.should == 5 }
   end
 
   describe '#timestamp' do

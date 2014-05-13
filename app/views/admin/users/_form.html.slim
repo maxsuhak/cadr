@@ -1,4 +1,4 @@
-= simple_form_for [:admin, @user] do |f|
+= simple_form_for [:admin, user] do |f|
   .field= f.input :full_name, disabled: true, required: false
   .field= f.association :tree
   .field= f.input :job

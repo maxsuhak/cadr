@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(:version => 20140326155410) do
     t.datetime "updated_at",  :null => false
   end
 
+  add_index "events", ["user_id"], :name => "index_events_on_user_id"
+
   create_table "posts", :force => true do |t|
     t.string   "email"
     t.string   "title"
@@ -111,5 +113,6 @@ ActiveRecord::Schema.define(:version => 20140326155410) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["tree_id"], :name => "index_users_on_tree_id"
 
 end
