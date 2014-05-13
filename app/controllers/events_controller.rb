@@ -12,7 +12,7 @@ class EventsController < ApplicationController
 
   def show
     respond_to do |format|
-      format.html 
+      format.html
       format.json { render json: @event }
     end
   end
@@ -20,20 +20,19 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
     respond_to do |format|
-      format.html 
+      format.html
       format.json { render json: @event }
     end
   end
 
   def create
-    @event = Event.new(params[:event])
-    @event.user_id = current_user.id
+    @event = current_user.events.new(params[:event])
     respond_to do |format|
       if @event.save
         format.html { redirect_to calendar_path, notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
       else
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +44,7 @@ class EventsController < ApplicationController
         format.html { redirect_to calendar_path, notice: 'Event was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end

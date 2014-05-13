@@ -1,7 +1,7 @@
 ul.nav.nav-tabs
   li class="#{:active if params[:action] == "index" }"
     = link_to "Users", admin_users_path
-  li class="#{:active if params[:action] == "unsorted" }" 
+  li class="#{:active if params[:action] == "unsorted" }"
     = link_to "Unsorted", unsorted_admin_users_path
 
 table.table.table-bordered

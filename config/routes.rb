@@ -1,5 +1,5 @@
 Cadr::Application.routes.draw do
-  
+
   mount Ckeditor::Engine => '/ckeditor'
 
   unless Rails.application.config.consider_all_requests_local
@@ -8,9 +8,9 @@ Cadr::Application.routes.draw do
 
   devise_for :admins
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks", registrations: "users/registrations" }
-  
+
   root to: redirect("/dashboards")
-  
+
   resources :users, only: [:index, :show, :edit, :update]
   resources :trees, only: [:index]
   resources :posts, only: [:index]
@@ -18,7 +18,7 @@ Cadr::Application.routes.draw do
   resources :docs, only: [:index, :show]
   resources :events
   resource :calendar, only: [:show]
-  
+
   namespace :admin do
     root to: "dashboards#index"
     resources :users, except: [:destroy, :new, :create] do

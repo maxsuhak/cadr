@@ -56,5 +56,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'letter_opener'
-  gem 'capybara', git: "git://github.com/jnicklas/capybara.git", branch: "1.1_stable"
+  gem 'capybara', git: 'git://github.com/jnicklas/capybara.git', branch: '1.1_stable'
+  gem 'rails_best_practices'
 end

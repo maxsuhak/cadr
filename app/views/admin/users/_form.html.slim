@@ -1,6 +1,6 @@
 = simple_form_for [:admin, @user] do |f|
-  .field= @user.full_name
-  .field= f.input :tree_id, collection: Tree.all
+  .field= f.input :full_name, disabled: true, required: false
+  .field= f.association :tree
   .field= f.input :job
   .link.pull-right
     = f.submit "Сохранить", class: "btn btn-warning"

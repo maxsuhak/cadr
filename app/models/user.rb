@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
     user = User.where(email: data["email"]).first
 
     return unless email_valid(data.email)
-    
+
     unless user
       user = User.new(
         first_name: data["first_name"],
