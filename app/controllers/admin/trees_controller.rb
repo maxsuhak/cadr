@@ -2,7 +2,7 @@ class Admin::TreesController < Admin::BaseController
   inherit_resources
 
   def index
-    @trees = Tree.paginate(page: params[:page], per_page: 5)
+    @trees = Tree.paginate(page: params[:page], per_page: 5).order('created_at DESC')
   end
 
   def show
