@@ -7,3 +7,4 @@ public/
 config/database.yml
 db/schema.rb
 coverage/
+rails_best_practices_output.html
