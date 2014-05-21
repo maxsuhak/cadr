@@ -11,3 +11,8 @@
       .login-postfix
         .login-line= f.input :remember_me, as: :boolean, label: "Запомнить?" if devise_mapping.rememberable?
         = f.button :submit, "Войти", class: "btn btn-warning"
+
+javascript:
+  window.location.hash="no-back-button";
+  window.location.hash="Again-No-back-button";
+  window.onhashchange=function(){window.location.hash="no-back-button";}

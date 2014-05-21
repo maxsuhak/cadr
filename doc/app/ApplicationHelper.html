@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>module ApplicationHelper - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/application_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-admin-3F">#admin?</a>
+    
+    <li><a href="#method-i-avatar_url">#avatar_url</a>
+    
+    <li><a href="#method-i-is_nil-3F">#is_nil?</a>
+    
+    <li><a href="#method-i-title_position">#title_position</a>
+    
+    <li><a href="#method-i-user-3F">#user?</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Admin.html">Admin</a>
+  
+    <li><a href="./Admin/BaseController.html">Admin::BaseController</a>
+  
+    <li><a href="./Admin/DashboardsController.html">Admin::DashboardsController</a>
+  
+    <li><a href="./Admin/PostsController.html">Admin::PostsController</a>
+  
+    <li><a href="./Admin/TreesController.html">Admin::TreesController</a>
+  
+    <li><a href="./Admin/UsersController.html">Admin::UsersController</a>
+  
+    <li><a href="./Ckeditor.html">Ckeditor</a>
+  
+    <li><a href="./Ckeditor/Asset.html">Ckeditor::Asset</a>
+  
+    <li><a href="./Ckeditor/AttachmentFile.html">Ckeditor::AttachmentFile</a>
+  
+    <li><a href="./Ckeditor/Picture.html">Ckeditor::Picture</a>
+  
+    <li><a href="./Users.html">Users</a>
+  
+    <li><a href="./Users/OmniauthCallbacksController.html">Users::OmniauthCallbacksController</a>
+  
+    <li><a href="./Users/RegistrationsController.html">Users::RegistrationsController</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CalendarsController.html">CalendarsController</a>
+  
+    <li><a href="./CkeditorAttachmentFileUploader.html">CkeditorAttachmentFileUploader</a>
+  
+    <li><a href="./CkeditorPictureUploader.html">CkeditorPictureUploader</a>
+  
+    <li><a href="./Dashboard.html">Dashboard</a>
+  
+    <li><a href="./DashboardsController.html">DashboardsController</a>
+  
+    <li><a href="./ErrorsController.html">ErrorsController</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./FlashHelper.html">FlashHelper</a>
+  
+    <li><a href="./ImageUploader.html">ImageUploader</a>
+  
+    <li><a href="./LanguagesController.html">LanguagesController</a>
+  
+    <li><a href="./Post.html">Post</a>
+  
+    <li><a href="./PostsController.html">PostsController</a>
+  
+    <li><a href="./Tree.html">Tree</a>
+  
+    <li><a href="./TreesController.html">TreesController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module ApplicationHelper</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-admin-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">admin?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="admin-3F-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">admin?</span>
+  <span class="ruby-identifier">resource_class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Admin</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- admin-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- admin-3F-method -->
+
+    
+      <div id="method-i-avatar_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">avatar_url</span><span
+            class="method-args">(user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="avatar_url-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">avatar_url</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>[<span class="ruby-value">:avatar_url</span>].<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">user</span>[<span class="ruby-value">:avatar_url</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">default_url</span> = <span class="ruby-node">&quot;#{root_url}images/guest.png&quot;</span>
+    <span class="ruby-identifier">gravatar_id</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">user</span>[<span class="ruby-value">:email</span>].<span class="ruby-identifier">downcase</span>)
+    <span class="ruby-node">&quot;http://gravatar.com/avatar/#{gravatar_id}.png?s=68&amp;d=#{CGI.escape(default_url)}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- avatar_url-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- avatar_url-method -->
+
+    
+      <div id="method-i-is_nil-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">is_nil?</span><span
+            class="method-args">(obj)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="is_nil-3F-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">is_nil?</span> <span class="ruby-identifier">obj</span>
+  <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">title</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">obj</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- is_nil-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- is_nil-3F-method -->
+
+    
+      <div id="method-i-title_position" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">title_position</span><span
+            class="method-args">(obj)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="title_position-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">title_position</span> <span class="ruby-identifier">obj</span>
+  <span class="ruby-identifier">title</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">title</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">%</span> <span class="ruby-value">2</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:div</span>, <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:div</span>, <span class="ruby-node">&quot;#{title}&quot;</span>).<span class="ruby-identifier">html_safe</span>, <span class="ruby-identifier">class</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;right_title&quot;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:div</span>, <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:div</span>, <span class="ruby-node">&quot;#{title}&quot;</span>).<span class="ruby-identifier">html_safe</span>, <span class="ruby-identifier">class</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;left_title&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- title_position-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- title_position-method -->
+
+    
+      <div id="method-i-user-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">user?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="user-3F-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">user?</span>
+  <span class="ruby-identifier">resource_class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">User</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- user-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- user-3F-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
