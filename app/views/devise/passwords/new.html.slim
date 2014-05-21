@@ -1,0 +1,12 @@
+#login-box.modal.text-center
+  = simple_form_for resource, as: resource_name, url: password_path(resource_name), html: { method: :post } do |f|
+    = f.error_notification
+    .form-inputs.modal-header
+      h5 Забыли пароль?
+    .form-inputs.modal-body
+      = f.input :email, required: true, autofocus: true, label: false, placeholder: 'Емейл', input_html: { class: "text-center" }
+    .form-inputs.modal-footer
+      .pull-left
+        = link_to "Логин", new_admin_session_path, class: "button"
+      .pull-right
+        = f.button :submit, "Отправить"
