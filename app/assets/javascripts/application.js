@@ -17,7 +17,7 @@
 //= require jquery.ui.droppable
 //= require jquery.ui.resizable
 //= require jquery.ui.selectable
-//= require bootstrap
+//= require twitter/bootstrap
 //= require ckeditor/init
 //= require fullcalendar
 //= require jquery.rest

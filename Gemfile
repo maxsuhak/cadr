@@ -5,8 +5,6 @@ gem 'rails', '3.2.13'
 
 gem 'devise'
 gem 'slim'
-gem 'less'
-gem 'less-rails'
 gem 'inherited_resources'
 gem 'simple_form'
 gem 'will_paginate'
@@ -29,10 +27,13 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass'
   gem 'bootstrap-will_paginate'
+  gem 'less'
+  gem 'less-rails'
+  gem 'less-rails-bootstrap'
+  gem 'therubyracer', platforms: :ruby
 end
 
 group :production do
-  gem 'therubyracer'
   gem 'libv8'
   gem 'pg'
   gem 'rails_12factor'
