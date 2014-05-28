@@ -214,6 +214,7 @@ min-height: 100%;
   text-align: center;
   color: #fff;
   font-size: 260%;
+  z-index: 2;
 }
 .clearfix:after {
   content: ".";
@@ -251,5 +252,5 @@ min-height: 100%;
 }
 
 .box-wraper-back:hover {
-  background: rgba(204,204,204,0.15);
+  background: rgba(200,200,200,0.5);
 }
