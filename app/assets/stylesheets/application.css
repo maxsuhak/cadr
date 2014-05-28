@@ -191,6 +191,65 @@
 .view-first:hover a.info {
     transition-delay: 0.2s;
 }
-#user_birthday {
-  width: 220px;
+
+html, body, #wrap {
+height: 100%;
+margin: 0px;
+}
+
+body > #wrap {
+height: auto;
+min-height: 100%;
+}
+
+#main {
+  padding-bottom: 50px; /* отступ должен быть равен высоте футера */
+}
+#footer {
+  position: relative;
+  margin-top: -50px; /* отрицательное значение высоты футера */
+  height: 50px;
+  clear:both;
+  background: #000;
+  text-align: center;
+  color: #fff;
+  font-size: 260%;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+
+.box-wraper-back {
+  left: 50px;
+  position: fixed;
+  width: 100px;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(254,254,254,0.05);
+}
+
+.box-wraper-back:after {
+  content: "^^^^^^^^^^^";
+  color: #000;
+  font-size: 12px;
+  margin: 20px;
+}
+
+.box-wraper-back:hover {
+  background: rgba(204,204,204,0.15);
 }

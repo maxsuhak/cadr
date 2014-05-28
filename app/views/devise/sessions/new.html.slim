@@ -1,7 +1,7 @@
 .form-login
   .login-title Вход в систему
   - unless admin?
-    .login-link= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)
+    .login-title= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2), class: "btn btn-warning"
   - unless user?
     = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       = f.input :email, required: false, autofocus: true, label: false, placeholder: 'Логин', wrapper: false
