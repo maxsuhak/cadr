@@ -12,4 +12,8 @@ class Admin::UsersController < Admin::BaseController
   def unsorted
     @users = User.unsorted.paginate(page: params[:page], per_page: 5).order('created_at DESC')
   end
+
+  def show
+    redirect_to admin_users_path
+  end
 end

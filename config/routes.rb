@@ -21,7 +21,7 @@ Cadr::Application.routes.draw do
 
   namespace :admin do
     root to: "dashboards#index"
-    resources :users, except: [:destroy, :new, :create] do
+    resources :users, except: [:new, :create] do
       collection do
         get :unsorted
       end
