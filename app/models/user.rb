@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar_url, ImageUploader
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+         :recoverable, :rememberable, :trackable, :confirmable, :validatable, :omniauthable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me
   
