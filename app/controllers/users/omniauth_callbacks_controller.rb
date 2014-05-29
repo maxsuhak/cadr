@@ -3,9 +3,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @user = User.find_for_google_oauth2(request.env["omniauth.auth"], current_user)
     flash[:notice] = I18n.t "devise.omniauth_callbacks.success", kind: "Google"
 
-    if @user == nil
+    unless @user.present?
       redirect_to root_url
-    elsif @user.confirmed?
+    end
+
+    if @user.confirmed?
       sign_in_and_redirect @user, event: :authentication
     else
       UserMailer.device_registration_success_email(@user).deliver
