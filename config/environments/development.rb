@@ -35,17 +35,18 @@ Cadr::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  config.action_mailer.raise_delivery_errors = true
+
   config.action_mailer.delivery_method = :smtp
-  
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  
+  #config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = {:host => 'localhost:3000'}
   config.action_mailer.smtp_settings = {
-      address: "smtp.gmail.com",
-      port: 587,
-      domain: "gmail.com",
-      user_name: "a.kuranov@svitla.com",
-      password: "Lerti5e8b",
-      authentication: :plain,
-      enable_starttls_auto: true
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :domain => "gmail.com",
+      :user_name => "maxsuhak@gmail.com",
+      :password => "nadegda1!",
+      :authentication => :plain,
+      :enable_starttls_auto => true
   }
 end
