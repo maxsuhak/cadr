@@ -1,4 +1,4 @@
-h1 Світла команда
+h1 = t('tree')
 
 - @trees.each do |g|
   .view.view-first
@@ -6,4 +6,4 @@ h1 Світла команда
     .mask
       h2 = g.title
       p = g.desc
-      = link_to "Show", users_path(id: g.id), class: "info"
+      = link_to t('show'), users_path(id: g.id), class: "info"
