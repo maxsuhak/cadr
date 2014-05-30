@@ -235,9 +235,9 @@ min-height: 100%;
 }
 
 .box-wraper-back {
-  left: 50px;
+  right: 0px;
   position: fixed;
-  width: 100px;
+  width: 150px;
   top: 0;
   bottom: 0;
   z-index: 1;
@@ -245,7 +245,6 @@ min-height: 100%;
 }
 
 .box-wraper-back:after {
-  content: "^^^^^^^^^^^";
   color: #000;
   font-size: 12px;
   margin: 20px;
