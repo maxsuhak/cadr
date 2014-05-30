@@ -1,10 +1,9 @@
-h1
-  | Список рассылок
+h1 = t('email')
 table.table.table-bordered
   thead
     tr
-      th email
-      th title
+      th = t('email')
+      th = t('title')
   tbody
     - @posts.each do |p|
       tr

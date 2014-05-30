@@ -1,12 +1,12 @@
 #main-navigation
   ul
     li
-      = link_to "Home", admin_dashboards_path, class: "entypo-home #{"active-tab" if params[:controller] == "admin/dashboards" }"
+      = link_to t('news'), admin_dashboards_path, class: "entypo-home #{"active-tab" if params[:controller] == "admin/dashboards" }"
     li
-      = link_to "Tree", admin_trees_path, class: "entypo-flow-parallel #{"active-tab" if params[:controller] == "admin/trees" }"
+      = link_to t('tree'), admin_trees_path, class: "entypo-flow-parallel #{"active-tab" if params[:controller] == "admin/trees" }"
     li
-      = link_to "Email", admin_posts_path, class: "entypo-mail #{"active-tab" if params[:controller] == "admin/posts" }"
+      = link_to t('email'), admin_posts_path, class: "entypo-mail #{"active-tab" if params[:controller] == "admin/posts" }"
     li
-      = link_to "Users", admin_users_path, class: "entypo-flow-branch #{"active-tab" if params[:controller] == "admin/users" }"
+      = link_to t('users'), admin_users_path, class: "entypo-flow-branch #{"active-tab" if params[:controller] == "admin/users" }"
     li
-      = link_to "Log out", destroy_admin_session_path, method: :delete, class: "entypo-logout"
+      = link_to t('log_out'), destroy_admin_session_path, method: :delete, class: "entypo-logout"
