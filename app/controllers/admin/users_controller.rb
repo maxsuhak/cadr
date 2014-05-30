@@ -6,7 +6,7 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def show
-    UserMailer.after_update(User.find(params[:id])).deliver
+    UserMailer.after_admin_update(User.find(params[:id])).deliver
     redirect_to admin_users_path
   end
 
