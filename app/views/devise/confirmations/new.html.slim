@@ -1,9 +1,9 @@
 .form-login
-  .login-title Resend confirmation instructions
+  .login-title = t('resend')
   = simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
-    = f.input :email, required: false, autofocus: true, label: false, placeholder: 'Логин', wrapper: false
-    = f.button :submit, "Resend confirmation instructions", class: "btn btn-warning"
-  .login-title= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2), class: "btn btn-warning"
+    = f.input :email, required: false, autofocus: true, label: false, placeholder: t('mail'), wrapper: false
+    = f.button :submit, t('resend'), class: "btn btn-warning"
+  .login-title= link_to t('google'), user_omniauth_authorize_path(:google_oauth2), class: "btn btn-warning"
 javascript:
   window.location.hash="no-back-button";
   window.location.hash="Again-No-back-button";

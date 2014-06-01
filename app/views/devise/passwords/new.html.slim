@@ -1,9 +1,9 @@
 .form-login
-  .login-title Забыли пароль?
+  .login-title = t('new_pass')
   = simple_form_for resource, as: resource_name, url: password_path(resource_name), html: { method: :post } do |f|
-    = f.input :email, required: true, autofocus: true, label: false, placeholder: 'Емейл', input_html: { class: "text-center" }
-    = f.button :submit, "Отправить", class: "btn btn-warning"
-    .login-title= link_to "Логин", new_admin_session_path, class: "btn btn-warning"
+    = f.input :email, required: true, autofocus: true, label: false, placeholder: t('mail'), input_html: { class: "text-center" }
+    = f.button :submit, t('send'), class: "btn btn-warning"
+    .login-title= link_to t('log_in'), new_admin_session_path, class: "btn btn-warning"
 
 javascript:
   window.location.hash="no-back-button";

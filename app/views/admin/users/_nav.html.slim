@@ -1,17 +1,17 @@
 ul.nav.nav-tabs
   li class="#{:active if params[:action] == "index" }"
-    = link_to "Users", admin_users_path
+    = link_to t('users'), admin_users_path
   li class="#{:active if params[:action] == "unsorted" }"
-    = link_to "Unsorted", unsorted_admin_users_path
+    = link_to t('unsorted'), unsorted_admin_users_path
 
 table.table.table-bordered
   thead
     tr
-      th Full Name
-      th Email
-      th Department
-      th Job
-      th Action
+      th = t('full_name')
+      th = t('mail')
+      th = t('department')
+      th = t('job')
+      th = t('action')
   tbody
     - users.each do |p|
       tr
@@ -19,5 +19,5 @@ table.table.table-bordered
         td = p.email
         td = is_nil?(p.tree)
         td = p.job
-        td = link_to "Delete", admin_user_path(p.id), class: "btn btn-warning", method: :delete, data: {confirm: "Delete user?"}
+        td = link_to t('del'), admin_user_path(p.id), class: "btn btn-warning", method: :delete, data: {confirm: t('confirm')}
 = will_paginate users

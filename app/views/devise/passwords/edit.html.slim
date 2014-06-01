@@ -1,10 +1,10 @@
 .form-login
-  .login-title Change your password
+  .login-title = t('change')
   = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
-    = f.input :password, required: true, autofocus: true, label: false, placeholder: 'Пароль', input_html: { class: "text-center" }
-    = f.input :password_confirmation, required: true, autofocus: true, label: false, placeholder: 'Подтвердите пароль', input_html: { class: "text-center" }
-    = f.button :submit, "Change my password", class: "btn btn-warning"
-    .login-title= link_to "Логин", new_admin_session_path, class: "btn btn-warning"
+    = f.input :password, required: true, autofocus: true, label: false, placeholder: t('password'), input_html: { class: "text-center" }
+    = f.input :password_confirmation, required: true, autofocus: true, label: false, placeholder: t('password_confirmation'), input_html: { class: "text-center" }
+    = f.button :submit, t('change'), class: "btn btn-warning"
+    .login-title= link_to t('log_in'), new_admin_session_path, class: "btn btn-warning"
 
 javascript:
   window.location.hash="no-back-button";
