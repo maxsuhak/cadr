@@ -1,6 +1,6 @@
 == Cadr
 
-This is a source code for a Cadr website.
+This is a source code for a managing companies website
 
 == Getting Started
 
