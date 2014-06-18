@@ -9,3 +9,11 @@ You should see
 
 1. Latest news
 2. Structure of a company
+3. Delivery
+4. Registration through Google (Omniauth)
+5. A full-sized drag & drop event calendar (jQuery plugin).
+6. View information about all employees
+7. The ability to edit user information
+8. Interface for managing data
+
+and other more.
