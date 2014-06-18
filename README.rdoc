@@ -1,15 +1,12 @@
 == Cadr
 
 This is a source code for a Cadr website.
-It is changeover for a site link:https://sites.google.com/a/svitla.com/svitla/
 
 == Getting Started
 
-You should see
-
 1. Latest news
 2. Structure of a company
-3. Delivery
+3. Mail delivery
 4. Registration through Google (Omniauth)
 5. A full-sized drag & drop event calendar (jQuery plugin).
 6. View information about all employees
