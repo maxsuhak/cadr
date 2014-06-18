@@ -186,6 +186,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    railroady (1.1.1)
     rails (3.2.13)
       actionmailer (= 3.2.13)
       actionpack (= 3.2.13)
@@ -343,6 +344,7 @@ DEPENDENCIES
   poltergeist
   pry
   rack-contrib
+  railroady
   rails (= 3.2.13)
   rails-i18n
   rails_12factor

@@ -60,4 +60,5 @@ group :development, :test do
   gem 'letter_opener'
   gem 'capybara', git: 'git://github.com/jnicklas/capybara.git', branch: '1.1_stable'
   gem 'rails_best_practices'
+  gem 'railroady'
 end
